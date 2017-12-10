@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" styleClass="pane" fx:controller="Controllers.Controller">
+
+   <Button fx:id="instructor" layoutX="204.0" layoutY="183.0" onAction="#onInstructorClick" styleClass="instructor"  text="Instructor">
+
+   </Button>
+   <Button fx:id="student" layoutX="211.0" layoutY="244.0" onAction="#onStudentClick" styleClass="student" text="Student">
+
+   </Button>
+
+   <stylesheets>
+      <URL value="@../CSSFiles/ButtonStyle.css" />
+   </stylesheets>
+</AnchorPane>

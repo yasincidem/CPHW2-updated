@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="501.0" styleClass="pane" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.InstructorController">
+   <children>
+
+      <Button layoutX="215.0" layoutY="157.0" mnemonicParsing="false" onAction="#addRecord" prefHeight="25.0" prefWidth="58.0" styleClass="button" text="Add" />
+      <TextField fx:id="studentNameTextField" layoutX="124.0" layoutY="53.0" promptText="Enter Student Name" />
+      <Label layoutX="34.0" layoutY="57.0" text="Student Name:" textFill="white" />
+      <Label layoutX="34.0" layoutY="96.0" text="Student Id:" textFill="white" />
+      <TextField fx:id="studentIdTextField" layoutX="124.0" layoutY="92.0" promptText="Enter Student Id" />
+      <ChoiceBox fx:id="choiceBox" layoutX="124.0" layoutY="14.0" prefHeight="25.0" prefWidth="149.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Math" />
+               <String fx:value="Physics" />
+               <String fx:value="Biology" />
+               <String fx:value="Pyschology" />
+            </FXCollections>
+         </items>
+      </ChoiceBox>
+      <Label layoutX="34.0" layoutY="18.0" text="Course Id:" textFill="white" />
+      <Label layoutX="34.0" layoutY="136.0" text="Grade:" textFill="white" />
+      <TextField fx:id="gradeTextField" layoutX="124.0" layoutY="132.0" promptText="Grade(/100)" />
+      <TableView fx:id="table" blendMode="SCREEN" layoutX="11.0" layoutY="199.0" prefHeight="239.0" prefWidth="480.0">
+        <columns>
+          <TableColumn fx:id="studentId" prefWidth="120.0" text="Student Id" />
+          <TableColumn fx:id="studentName" prefWidth="138.0" text="Student Name" />
+          <TableColumn fx:id="grade" prefWidth="94.0" text="Grade" />
+          <TableColumn fx:id="course" prefWidth="127.0" text="Course" />
+        </columns>
+      </TableView>
+
+      <Label fx:id="errorStudentId" layoutX="283.0" layoutY="96.0" prefHeight="17.0" prefWidth="212.0" textFill="yellow" />
+      <Label fx:id="errorStudentName" layoutX="283.0" layoutY="57.0" prefHeight="17.0" prefWidth="212.0" textFill="yellow" />
+      <Label fx:id="errorStudentGrade" layoutX="283.0" layoutY="136.0" prefHeight="17.0" prefWidth="212.0" textFill="yellow" />
+      <Label fx:id="errorCourse" layoutX="283.0" layoutY="18.0" prefHeight="17.0" prefWidth="212.0" textFill="yellow" />
+      <Label fx:id="errorDBAlreadyHas" layoutX="283.0" layoutY="96.0" prefHeight="17.0" prefWidth="212.0" textFill="yellow" />
+      <ImageView fx:id="backButton" fitHeight="25.0" fitWidth="22.0" layoutX="5.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ic_arrow_back_white_18dp.png" />
+         </image>
+      </ImageView>
+      
+       
+   </children>
+   <stylesheets>
+      <URL value="@../CSSFiles/Instructor.css" />
+   </stylesheets>
+</AnchorPane>
